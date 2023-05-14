@@ -1,0 +1,26 @@
+.main-list {
+    height: calc(100vh - 0px);
+    background-image: url("../../assets/images/seafood.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 20px 70px;
+}
+
+table {
+    margin-top: 5%;
+    background-color: rgba(204, 229, 255, 0.8);
+    border-collapse: separate;
+    border-spacing: 25px 15px;
+    margin-left: 4%;
+}
+
+th {
+    text-align: center;
+    color: #000117;
+}
+
+td {
+    text-align: justify;
+}

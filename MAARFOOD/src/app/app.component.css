@@ -1,0 +1,498 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+
+
+.a-CTA,
+input,
+header .navigation-bar a,
+.copyright li,
+.contact .form form label,
+.contact .form form button {
+    font-family: Cabin, sans-serif;
+}
+
+.fa-asterisk,
+.a-CTA,
+h2,
+header .navigation-bar a:hover,
+header nav.active .navigation-bar a:hover,
+footer .social-media .links a:hover,
+.copyright .info li a,
+.copyright .CTA li a:hover {
+    color: #a96700;
+}
+
+
+
+header .navigation-bar ul li,
+header .text,
+footer,
+.copyright,
+.contact .text i {
+    text-align: center;
+    list-style-type: none;
+}
+
+header nav,
+header .navigation-bar ul,
+footer .contact-container,
+.copyright ul,
+.contact {
+    display: flex;
+}
+
+header nav .toggle,
+header nav .toggle span,
+header .navigation-bar,
+header .navigation-bar ul,
+footer .social-media .links a,
+.copyright .CTA li a {
+    transition: .3s;
+}
+
+header,
+header nav .toggle span,
+header .navigation-bar a,
+header .text,
+header .text .arrow .left,
+header .text .arrow .right,
+.copyright,
+.copyright .arrow-up {
+    position: relative;
+}
+
+header nav .toggle,
+header .navigation-bar .underline,
+header .text .arrow .left:after,
+header .text .arrow .right:after,
+header .svg-down,
+header .arrow-down,
+.copyright .svg-up {
+    position: absolute;
+}
+
+
+header nav,
+header .navigation-bar a:hover .underline,
+header .navigation-bar li.active .underline{
+    width: 100%;
+}
+
+header nav .toggle,
+header .arrow-down
+footer .newsletter i,
+.copyright .arrow-up {
+    cursor: pointer;
+}
+
+.dots .active,
+header nav.active,
+header nav.active .toggle.active span,
+header nav .toggle span,
+header .navigation-bar .underline,
+header .text .arrow .left,
+header .text .arrow .right,
+header .text .button button,
+.contact form button {
+    background-color: #fff;
+}
+
+h1,
+h3,
+header .navigation-bar a,
+header .text span,
+.menu .box-model .close:hover,
+footer .text h2,
+footer .text p,
+footer .social-media .links a,
+.contact .text i,
+.contact .form form button {
+    color: #ecab0f;
+    font-size: 15px;
+    text-shadow: 4px 4px 5px #b57c00;
+}
+
+header nav,
+header .navigation-bar.show,
+header .navigation-bar a:hover .underline,
+header .navigation-bar li.active .underline,
+header .text .arrow .left:after,
+.menu .box-model,
+.copyright .arrow-up {
+    left: 0;
+}
+
+header .text .arrow .left:after,
+header .text .arrow .right:after,
+header .text span,
+footer .social-media .links a,
+footer .newsletter i,
+.copyright .arrow-up,
+.contact .text i,
+.contact .form form label {
+    display: inline-block;
+}
+
+
+
+header nav {
+    position: fixed;
+    top: 0;
+    padding: 36px 36px 20px;
+    z-index: 20;
+}
+
+header nav .toggle {
+    display: none;
+    top: 26px;
+    left: 20px;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    z-index: 21;
+}
+
+header nav .toggle:focus {
+    outline: none;
+}
+
+header nav.active .toggle span {
+    background-color: #000;
+}
+
+header nav .toggle.active {
+    left: 32%;
+}
+
+header nav .toggle.active .first {
+    top: 16px;
+    transform: rotate(-45deg);
+}
+
+header nav .toggle.active .last {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+header nav .toggle .hide {
+    transition: 0s;
+    visibility: hidden;
+}
+
+header nav .toggle span {
+    display: block;
+    width: 30px;
+    height: 2px;
+    border-radius: 40px;
+}
+
+header nav .toggle span:not(:last-of-type) {
+    margin-bottom: 6px;
+}
+
+header nav .logo {
+    flex-basis: 56%;
+    padding-left: 50px;
+}
+
+header .navigation-bar.show {
+    width: 40%;
+}
+
+header .navigation-bar.show a {
+    color: #ccc !important;
+}
+
+header .navigation-bar.show a:hover {
+    color: #fff !important;
+}
+
+header .navigation-bar ul li {
+    flex: 1;
+    padding: 0 10px;
+}
+
+header .navigation-bar a {
+    text-decoration: none;
+    transition: all .5s;
+    font-size: 16px;
+}
+
+header nav.active .navigation-bar a {
+    color: #000;
+}
+
+header .navigation-bar .underline {
+    height: 2px;
+    width: 0;
+    left: 50%;
+    bottom: -4px;
+    transition: all .3s;
+    display: block;
+}
+
+
+
+
+footer {
+    background-color: #121212;
+    padding: 60px 20px;
+}
+
+footer .text {
+    max-width: 500px;
+    margin: auto;
+}
+
+footer .text h2 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 19px;
+    letter-spacing: 1.9px;
+    margin-bottom: 25px;
+}
+
+footer .text .fa-asterisk {
+    font-size: 12px;
+}
+
+footer .text p {
+    line-height: 27px;
+}
+
+footer .contact-container {
+    padding: 40px 0;
+    max-width: 1000px;
+    margin: auto;
+}
+
+footer .contact-container>div {
+    flex: 1;
+}
+
+footer .contact-container h3 {
+    font-size: 19px;
+    letter-spacing: 1.9px;
+}
+
+footer .social-media .links a {
+    margin: 0 10px;
+    font-size: 25px;
+}
+
+footer .newsletter input {
+    padding: 10px;
+    width: 270px;
+    background-color: #eee;
+    border: none;
+    margin-left: -15px;
+}
+
+footer .newsletter i {
+    margin-left: -40px;
+    vertical-align: middle;
+    font-size: 21px;
+}
+
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f2f2;
+    box-shadow: 0px 0px 15px #00000027;
+    padding: 10px 10px;
+    border-radius: 5em;
+  }
+  
+  .social-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 0 10px;
+    background-color: #fff;
+    box-shadow: 0px 0px 4px #00000027;
+    transition: 0.3s;
+  }
+  
+  .social-button:hover {
+    background-color: #f2f2f2;
+    box-shadow: 0px 0px 6px 3px #00000027;
+  }
+  
+  .social-buttons svg {
+    transition: 0.3s;
+    height: 20px;
+  }
+  
+  .facebook {
+    background-color: #3b5998;
+  }
+  
+  .facebook svg {
+    fill: #f2f2f2;
+  }
+  
+  .facebook:hover svg {
+    fill: #3b5998;
+  }
+  
+  .tiktok {
+    background-color: #333;
+  }
+  
+  .tiktok svg {
+    width: 25px;
+    height: 25px;
+    fill: #f2f2f2;
+  }
+  
+  .tiktok:hover svg {
+    fill: #333;
+  }
+  
+  .linkedin {
+    background-color: #0077b5;
+  }
+  
+  .linkedin svg {
+    fill: #f2f2f2;
+  }
+  
+  .linkedin:hover svg {
+    fill: #0077b5;
+  }
+  
+  .instagram {
+    background-color: #c13584;
+  }
+  
+  .instagram svg {
+    fill: #f2f2f2;
+  }
+  
+  .instagram:hover svg {
+    fill: #c13584;
+  }
+  
+
+
+
+.copyright {
+    padding: 15px 40px 30px;
+    background-color: #262526;
+}
+
+.copyright .svg-up {
+    top: 0;
+    left: 50%;
+    margin-left: -96px;
+    margin-top: -50px;
+}
+
+.copyright .arrow-up {
+    width: 40px;
+    height: 30px;
+    top: -45px;
+    color: #fff;
+    line-height: 1.9
+}
+
+.copyright ul {
+    justify-content: center;
+}
+
+.copyright li {
+    color: #919191;
+    font-size: 14px;
+}
+
+.copyright li:not(:last-of-type):after {
+    content: '•';
+    margin: 10px;
+}
+
+.copyright .CTA {
+    margin-top: 25px;
+}
+
+.copyright .CTA li a {
+    color: #919191;
+}
+
+/*End Footer*/
+
+/*End Home Page*/
+
+/*Start Contact Page*/
+.contact-header {
+    background-image: url("https://res.cloudinary.com/abdel-rahman-ali/image/upload/v1535988526/contact-food.jpg");
+    height: 40vh;
+}
+
+.contact {
+    padding: 78px 40px;
+}
+
+.contact>div {
+    flex: 50%;
+}
+
+.contact .text p {
+    margin-bottom: 30px;
+}
+
+.contact .text i {
+    width: 50px;
+    height: 50px;
+    background-color: #000;
+    border-radius: 50%;
+    line-height: 48px;
+    font-size: 24px;
+}
+
+.contact .text h2 {
+    font-family: source_sans_problack, sans-serif;
+    font-size: 24px;
+    color: #262626;
+    letter-spacing: 2.4px;
+    margin-bottom: 20px;
+}
+
+.contact .form {
+    margin-left: 48px;
+}
+
+.contact .form form label {
+    margin-bottom: 5px;
+    color: #515151;
+}
+
+.contact .form form input,
+.contact .form form textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 24px;
+    border-radius: 5px;
+    border: 2px solid #D8D8D8;
+    outline: none;
+}
+
+.contact .form form input:focus,
+.contact .form form textarea:focus {
+    border-color: #a96700;
+    box-shadow: 0 1px 1px #737373;
+}
+
+.contact .form form textarea {
+    height: 212px;
+    resize: none;
+}
+
+.contact .form form button {
+    background-color: #262526;
+    padding: 12px 30px;
+    font-size: 12px;
+}

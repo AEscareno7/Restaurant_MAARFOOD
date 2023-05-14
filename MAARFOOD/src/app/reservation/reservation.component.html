@@ -1,0 +1,68 @@
+<section class="form">
+    <form (ngSubmit)="onSubmit()" #reservationForm="ngForm">
+        
+        <!-- Nombre -->
+
+        <div class="form-group">
+          <label for="firstName">Nombre</label>
+          <input type="text" class="form-control" id="firstName" name="firstName" [(ngModel)]="reservation.firstName" required>
+        </div>
+
+
+        <!-- Apellidos -->
+
+        <div class="form-group">
+          <label for="lastName">Apellidos</label>
+          <input type="text" class="form-control" id="lastName" name="lastName" [(ngModel)]="reservation.lastName" required>
+        </div>
+
+
+        <!-- Email -->
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" id="email" name="email" [(ngModel)]="reservation.email" required>
+        </div>
+
+
+        <!-- Telefono -->
+
+        <div class="form-group">
+          <label for="phone">Teléfono</label>
+          <input type="tel" class="form-control" id="phone" name="phone" [(ngModel)]="reservation.phone" required>
+        </div>
+
+
+        <!-- Fecha -->
+
+        <div class="form-group">
+          <label for="date">Fecha</label>
+          <input type="date" class="form-control" id="date" name="date"  [(ngModel)]="reservation.date" (ngModelChange)="checkReservation()" min="{{ today }}" />
+          <div *ngIf="dateError" class="text-danger">Fecha no válida</div>
+        </div>
+
+
+        <!-- Hora -->
+        <div class="form-group">
+          <label for="time">Hora</label>
+          <select class="form-control" id="time" name="time" [(ngModel)]="reservation.time" required (blur)="checkReservation()">
+            <option *ngFor="let timeOption of timeOptions" [value]="timeOption" [disabled]="isTimeOptionDisabled(timeOption)">
+              {{timeOption}}
+            </option>
+          </select>
+          <div *ngIf="timeError" class="text-danger">Hora no válida</div>
+        </div>
+
+
+        <!-- Comentarios -->
+        <div class="form-group">
+          <label for="comments">Comentarios</label>
+          <textarea class="form-control" id="comments" name="comments" [(ngModel)]="reservation.comments"></textarea>
+        </div>
+
+
+        <!-- Button -->
+        <button type="submit" class="btn btn-primary" [disabled]="reservationForm.invalid || dateError || timeError">Reservar</button>
+      </form>
+      
+</section>

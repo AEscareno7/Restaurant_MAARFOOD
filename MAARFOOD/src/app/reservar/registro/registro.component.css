@@ -1,0 +1,58 @@
+*{
+    font-family: Cabin, sans-serif;
+
+}
+
+.main-div {
+    margin-top: 10%;
+    display: flex;
+}
+
+.inf-per {
+    width: 500px;
+    margin-left: 8%;
+}
+
+.inf-res {
+    width: 500px;
+    margin-left: 10%;
+}
+
+select {
+    width: 500px;
+    height: 55px;
+    border-radius: 8px;
+    border: 1px solid rgb(204, 204, 204);
+}
+
+.comment {
+    display: block;
+    margin: 0 auto;
+    max-width: 400px;
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.send {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3%;
+}
+
+
+
+.has-error input.form-control {
+    border-color: red;
+  }
+  
+  .has-error .invalid-feedback {
+    display: block;
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  
+  
