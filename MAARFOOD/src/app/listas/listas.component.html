@@ -5,12 +5,7 @@
     <table>
         
       <thead>
-        <div class="search-container">
-            <label for="searchInput"></label>
-            <input id="searchInput" type="text" [(ngModel)]="searchTerm" />
-            <button (click)="search()">Buscar</button>
-            <h1>Resultados de búsqueda para: {{searchTerm}}</h1>
-          </div>
+        
         <tr>
           <th scope="col" colspan="2"> Nombre </th>
           <th scope="col" colspan="2"> Apellido </th>
@@ -31,7 +26,16 @@
           <td colspan="2">{{ reserva.time }}</td>
           <td colspan="2">{{ reserva.comments }}</td>
         </tr>
+        
       </tbody>
     </table>
+    <div class="search-container">
+      <label for="searchInput"></label>
+      <input id="searchInput" type="text" [(ngModel)]="searchTerm" />
+      <button (click)="search()">Buscar</button>
+    
+      <h4>Resultados de búsqueda para: {{searchTerm}}</h4>
+    </div>
+    
   </div>
   

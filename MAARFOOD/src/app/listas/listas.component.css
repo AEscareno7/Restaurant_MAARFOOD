@@ -27,3 +27,46 @@ th {
 td {
     text-align: justify;
 }
+
+
+
+.search-container {
+    display: flex;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  background-color: #f7f7f7;
+  width: 100%;
+  margin-top: 40px;
+  }
+  
+  .search-container label {
+    margin-right: 0.5rem;
+    font-weight: bold;
+  }
+  
+  .search-container input {
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid #ccc;
+  }
+  
+  .search-container button {
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+   
+  }
+  
+  .search-container button:hover {
+    background-color: #0069d9;
+  }
+  
+  .search-container h4 {
+    font-size: 1.25rem;
+    margin: 0;
+    font-weight: normal;
+  }
+  
