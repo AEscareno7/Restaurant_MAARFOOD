@@ -4,12 +4,42 @@
 header {
   max-width: 100%;
   height: calc(100vh - 22px);
-  background: url("../../assets/images/HeaderAbout.png") fixed bottom;
+  background: url("../../assets/images/terraza.jpg") fixed bottom;
   background-size: cover;
   background-repeat: no-repeat;
   padding: 20px 70px;
 }
 
+
+.text-container{
+  display: grid;
+  place-items: center;
+  margin-top: 20%;
+}
+
+.title-header{
+  font-family: 'Dancing Script', cursive;
+  font-size: 130px;
+  color: #f6a700;
+  text-shadow: 3px 3px 1px #7e4400;
+}
+
+.title-hdr{
+  font-family: "Source Code Pro", sans-serif;
+    color: #fff;
+    text-shadow: 3px 3px #000117;
+    font-size: 70px;
+    font-weight: bold;
+    letter-spacing: 9.4px;
+    margin: 0 0 15px;
+    margin-top: 1%;
+}
+
+h4{
+  font-size: 40px;
+  color: #fff;
+  text-shadow: 3px 2px #000117;
+}
 
 
 h1 {
@@ -115,6 +145,7 @@ p {
 
 .team-text {
   margin-top: 7%;
+  margin-right: 8%;
 }
 
 .team-text h2 {
