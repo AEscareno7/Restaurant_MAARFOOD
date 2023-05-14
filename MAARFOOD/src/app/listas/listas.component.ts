@@ -7,13 +7,36 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListasComponent implements OnInit {
 
-  reservations: any[] = []; // Define the reservations property
+  reservations: any[] = [];
+  searchTerm: string = '';
+  showRow: boolean[] = [];
 
   constructor() { }
 
   ngOnInit(): void {
-    // Get the data from the localStorage and set it to the reservations property
     this.reservations = JSON.parse(localStorage.getItem('reservations') ?? '[]');
+    this.showRow = Array(this.reservations.length).fill(false);
+  }
+
+  search() {
+    this.showRow = this.reservations.map(() => false);
+    if (!this.searchTerm) {
+      return;
+    }
+    this.reservations.forEach((reserva, i) => {
+      Object.values(reserva).some((value: any) => {
+        if (value.toString().toLowerCase().includes(this.searchTerm.toLowerCase())) {
+          this.showRow[i] = true;
+          return true;
+        } else {
+          return false;
+        }
+      });
+    });
+  }
+
+  isSearchMatch(reserva: any): boolean {
+    return this.showRow[this.reservations.indexOf(reserva)];
   }
 
 }

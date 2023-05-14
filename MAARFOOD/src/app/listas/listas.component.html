@@ -1,27 +1,36 @@
-<div class="main-list">
-    <table>
-        <thead>
-            <tr>
-                <th scope="col" colspan="2"> Nombre </th>
-                <th scope="col" colspan="2"> Apellido </th>
-                <th scope="col" colspan="2"> Email</th>
-                <th scope="col" colspan="2"> Telefono </th>
-                <th scope="col" colspan="2"> Fecha </th>
-                <th scope="col" colspan="2"> Hora </th>
-                <th scope="col" colspan="2"> Comentario </th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let reserva of reservations">
-                <td colspan="2">{{ reserva.firstName }}</td>
-                <td colspan="2">{{ reserva.lastName }}</td>
-                <td colspan="2">{{ reserva.email }}</td>
-                <td colspan="2">{{ reserva.phone }}</td>
-                <td colspan="2">{{ reserva.date }}</td>
-                <td colspan="2">{{ reserva.time }}</td>
-                <td colspan="2">{{ reserva.comments }}</td>
-            </tr>
-        </tbody>
-    </table>
 
-</div>
+  
+  <div class="main-list">
+    
+    <table>
+        
+      <thead>
+        <div class="search-container">
+            <label for="searchInput"></label>
+            <input id="searchInput" type="text" [(ngModel)]="searchTerm" />
+            <button (click)="search()">Buscar</button>
+          </div>
+        <tr>
+          <th scope="col" colspan="2"> Nombre </th>
+          <th scope="col" colspan="2"> Apellido </th>
+          <th scope="col" colspan="2"> Email</th>
+          <th scope="col" colspan="2"> Telefono </th>
+          <th scope="col" colspan="2"> Fecha </th>
+          <th scope="col" colspan="2"> Hora </th>
+          <th scope="col" colspan="2"> Comentario </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let reserva of reservations; let i = index" [class.search-match]="showRow[i]">
+          <td colspan="2">{{ reserva.firstName }}</td>
+          <td colspan="2">{{ reserva.lastName }}</td>
+          <td colspan="2">{{ reserva.email }}</td>
+          <td colspan="2">{{ reserva.phone }}</td>
+          <td colspan="2">{{ reserva.date }}</td>
+          <td colspan="2">{{ reserva.time }}</td>
+          <td colspan="2">{{ reserva.comments }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

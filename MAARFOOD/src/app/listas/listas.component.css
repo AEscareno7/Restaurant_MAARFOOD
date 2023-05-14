@@ -1,3 +1,6 @@
+.search-match {
+    background-color: yellow;
+  }
 .main-list {
     height: calc(100vh - 0px);
     background-image: url("../../assets/images/seafood.jpg");
