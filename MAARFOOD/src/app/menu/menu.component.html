@@ -1,22 +1,18 @@
-<section>
-    <div class="grid-container" [ngClass]="{
-        'columns-5': columns === 5,
-        'columns-4': columns === 4,
-        'columns-3': columns === 3,
-        'columns-2': columns === 2,
-        'columns-1': columns === 1,
-        'masonry': true
-      }">
-        <div class="grid-item" *ngFor="let item of items" >
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" width="50px" height="100px" [src]="item.src" [alt]="item.alt">
-      
-            <div class="card-body">
-              <h5 class="card-title"><h3>{{ item.platillo }}</h3></h5>
-              <p class="card-text">Precio: ${{item.preci}} </p>       
-            </div>
-          </div>
-         
-        </div>
+<div class="grid-container" [ngClass]="{
+  'columns-5': columns === 5,
+  'columns-4': columns === 4,
+  'columns-3': columns === 3,
+  'columns-2': columns === 2,
+  'columns-1': columns === 1,
+  'masonry': true
+}">
+  <div class="grid-item" *ngFor="let item of items">
+    <div class="card">
+      <img class="card-img-top" [src]="item.src" [alt]="item.alt">
+      <div class="card-body">
+        <h5 class="card-title">{{ item.platillo }}</h5>
+        <p class="card-text">${{ item.preci }}</p>
       </div>
-</section>
+    </div>
+  </div>
+</div>
