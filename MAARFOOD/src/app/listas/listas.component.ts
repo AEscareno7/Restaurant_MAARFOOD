@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SearchService } from '../search.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-listas',
@@ -10,12 +12,20 @@ export class ListasComponent implements OnInit {
   reservations: any[] = [];
   searchTerm: string = '';
   showRow: boolean[] = [];
+  category: string = '';
 
-  constructor() { }
+  constructor(private searchService: SearchService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.reservations = JSON.parse(localStorage.getItem('reservations') ?? '[]');
+    this.reservations = this.searchService.getReservations();
     this.showRow = Array(this.reservations.length).fill(false);
+    this.route.params.subscribe(params => {
+      this.category = params['category'];
+      if (this.category) {
+        this.searchTerm = this.category;
+        this.search();
+      }
+    });
   }
 
   search() {
