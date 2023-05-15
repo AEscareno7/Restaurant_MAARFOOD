@@ -24,3 +24,101 @@ th {
 td {
     text-align: justify;
 }
+
+.search-match {
+    background-color: yellow;
+}
+
+.main-list {
+    height: calc(100vh - 0px);
+    background-image: url("../../assets/images/seafood.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 20px 70px;
+}
+
+table {
+    margin-top: 5%;
+    background-color: rgba(204, 229, 255, 0.8);
+    border-collapse: separate;
+    border-spacing: 25px 15px;
+    margin-left: 18%;
+}
+
+th {
+    text-align: center;
+    color: #000117;
+}
+
+td {
+    text-align: justify;
+}
+
+h2{
+    text-align: center;
+    margin-top: 3%;
+    color: #f6a700;
+    font-family: 'Dancing Script', cursive;
+    text-shadow: 3px 3px 3px #000117;
+    font-size: 50px;
+    font-weight: normal;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    margin-top: 7%;
+}
+
+.input {
+    max-width: 190px;
+    height: 100%;
+    outline: none;
+    font-size: 14px;
+    font-weight: 500;
+    background-color: #fff;
+    caret-color: #f7f7f8;
+    color: #fff;
+    padding: 7px 10px;
+    border: 2px solid transparent;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    margin-right: 1px;
+    transition: all .2s ease;
+}
+
+.input:hover {
+    border: 2px solid #fff;
+}
+
+.input:focus {
+    border: 2px solid #7e4400;
+    background-color: #f6a700;
+}
+
+.search__btn {
+    border: none;
+    cursor: pointer;
+    background-color: rgba(42, 42, 45, 1);
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    height: 100%;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search__btn:hover {
+    background-color: rgba(54, 54, 56, 1);
+}
+
+h4{
+    font-size: 25px;
+    color: #fff;
+    text-shadow: 2px 2px 4px #000117;
+}

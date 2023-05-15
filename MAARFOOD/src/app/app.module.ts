@@ -17,6 +17,7 @@ import { DomseguroPipe } from './about/domseguro.pipe';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ReservationComponent } from './reservation/reservation.component';
 import { ListasComponent } from './listas/listas.component';
+import { SearchService } from './search.service';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,7 @@ import { ListasComponent } from './listas/listas.component';
     DatepickerModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [SearchService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
